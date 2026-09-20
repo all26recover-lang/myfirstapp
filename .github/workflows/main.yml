@@ -1,3 +1,4 @@
+
 name: Build APK
 
 on:
@@ -22,7 +23,7 @@ jobs:
         sudo apt-get install -y libffi-dev libssl-dev autoconf automake libtool pkg-config zlib1g-dev
 
     - name: Build with Buildozer
-      uses: ArtemGovorov/buildozer-action@v1
+      uses: ArtemSBulgakov/buildozer-action@v1
       with:
         command: buildozer android debug
         repository_root: .
@@ -32,8 +33,6 @@ jobs:
       with:
         name: my-first-app
         path: bin/*.apk
-
-
 
 
 
