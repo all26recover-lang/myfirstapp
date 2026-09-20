@@ -1,5 +1,29 @@
 # This .spec config file tells Buildozer an app's requirements for being built.
-#
+#[app]
+title = My Application
+package.name = myapp
+package.domain = org.test
+source.dir = .
+source.include_exts = py,png,jpg,kv,atlas
+version = 0.1
+
+# এখানে প্রয়োজনীয় সব লাইব্রেরি যুক্ত করা হয়েছে
+requirements = python3,kivy,sqlite3,requests,urllib3,certifi,idna,charset-normalizer
+
+orientation = portrait
+fullscreen = 0
+
+# অ্যান্ড্রোয়েড বিল্ড কনফিগারেশন
+android.archs = armeabi-v7a, arm64-v8a
+android.allow_backup = True
+android.api = 33
+android.minapi = 21
+android.ndk_api = 21
+
+[buildozer]
+log_level = 2
+warn_on_root = 0
+
 # It largely follows the syntax of an .ini file.
 # See the end of the file for more details and warnings about common mistakes.
 
